@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ludo</title>
+    <link rel="stylesheet" href="style.css" />
+   
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="don1">Ludo Game</h1>
+
+      <div class="dice" id="check1">
+        <p>Player1</p>
+        <img  src="images/dice1.jpg" alt="pic1" />
+      </div>
+
+      <div class="dice" id="check2">
+        <p>Player2</p>
+        <img src="images/dice2.jpg" alt="pic2" />
+      </div>
+
+      <div class="btn">
+        <button onclick="abhi">Click ME</button>
+      </div>
+    </div>
+
+<script>
+
+  
+const abhi = ludogame = () =>{
+    
+    const play1 = Math.floor(Math.random * 6) + 1;
+    const play1dice = `images/dice${play1}.jpg`;
+    document.getElementById('check1').setAttribute('src',play1dice);
+
+    const play2 = Math.floor(Math.random * 6) + 1;
+    const play2dice = `images/dice${play2}.jpg`;
+    document.getElementById('check2').setAttribute('src',play2dice);
+
+
+    
+if(play1 > play2){
+        document.getElementById('don1').innerHTML("Player1 Won :)");
+    }else if( play1 < play2){
+        document.getElementById('don1').innerHTML("Player2 Won :)");
+    }else{
+        document.getElementById('don1').innerHTML("Draw");
+    }
+
+}
+
+</script>
+
+  </body>
+</html>
