@@ -11,9 +11,10 @@
       rel="stylesheet"
     />
   </head>
+  
   <body>
     <div class="container">
-      <h1 id="don1">Ludo Game</h1>
+      <h1>Ludo Game</h1>
 
       <div class="dice" id="check1">
         <p>Player1</p>
@@ -26,31 +27,31 @@
       </div>
 
       <div class="btn">
-        <button onclick="abhi">Click ME</button>
+        <button onclick="ludogame()">Click ME</button>
       </div>
     </div>
 
 <script>
 
   
-const abhi = ludogame = () =>{
+ludogame = () =>{
     
     const play1 = Math.floor(Math.random * 6) + 1;
     const play1dice = `images/dice${play1}.jpg`;
-    document.getElementById('check1').setAttribute('src',play1dice);
+    document.getElementById('check1').setAttribute('src', play1dice);
 
     const play2 = Math.floor(Math.random * 6) + 1;
     const play2dice = `images/dice${play2}.jpg`;
-    document.getElementById('check2').setAttribute('src',play2dice);
+    document.getElementById('check2').setAttribute('src', play2dice);
 
 
     
 if(play1 > play2){
-        document.getElementById('don1').innerHTML("Player1 Won :)");
+        document.querySelector('h1').innerHTML("Player1 Won :)");
     }else if( play1 < play2){
-        document.getElementById('don1').innerHTML("Player2 Won :)");
+        document.querySelector('h1').innerHTML("Player2 Won :)");
     }else{
-        document.getElementById('don1').innerHTML("Draw");
+        document.querySelector('h1').innerHTML("Draw");
     }
 
 }
